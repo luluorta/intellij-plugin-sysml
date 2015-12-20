@@ -1,12 +1,15 @@
-*.class
+# Build intermediate
+/gen/
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Build output
+/out/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# downloaded libs/resources
+/lib/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Per-user settings
+# https://intellij-support.jetbrains.com/entries/23393067
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/encodings.xml
+.idea/misc.xml
