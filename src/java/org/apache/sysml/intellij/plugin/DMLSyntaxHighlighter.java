@@ -25,22 +25,23 @@ public class DMLSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributes CONSTANT;
     public static final TextAttributes FUNCTION_CALL;
     static{
+        Color color = DefaultLanguageHighlighterColors.FUNCTION_CALL.getDefaultAttributes().getForegroundColor();
         TextAttributes attr = DefaultLanguageHighlighterColors.CONSTANT.getDefaultAttributes().clone();
         BUILTIN = createTextAttributesKey("BUILTIN", attr);
-        BUILTIN.getDefaultAttributes().setForegroundColor(new Color(123, 141,191));
+        BUILTIN.getDefaultAttributes().setForegroundColor(color);
 
+        FUNCTION_CALL = attr.clone();
+        FUNCTION_CALL.setForegroundColor(color);
 
         attr = CodeInsightColors.INSTANCE_FIELD_ATTRIBUTES.getDefaultAttributes().clone();
         TYPE = createTextAttributesKey("TYPE", attr);
         TYPE.getDefaultAttributes().setForegroundColor(new Color(5, 112, 135));
 
-        CONSTANT = CodeInsightColors.INSTANCE_FIELD_ATTRIBUTES.getDefaultAttributes().clone();
-        Color color = DefaultLanguageHighlighterColors.CONSTANT.getDefaultAttributes().getForegroundColor();
+        CONSTANT = attr.clone();
+        color = DefaultLanguageHighlighterColors.CONSTANT.getDefaultAttributes().getForegroundColor();
         CONSTANT.setForegroundColor(color);
 
-        FUNCTION_CALL = DefaultLanguageHighlighterColors.CONSTANT.getDefaultAttributes().clone();
-        color = DefaultLanguageHighlighterColors.FUNCTION_CALL.getDefaultAttributes().getForegroundColor();
-        FUNCTION_CALL.setForegroundColor(color);
+
     }
     
 
