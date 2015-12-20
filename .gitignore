@@ -3,6 +3,7 @@
 
 # Build output
 /out/
+intellij-plugin-sysml.zip
 
 # downloaded libs/resources
 /lib/
