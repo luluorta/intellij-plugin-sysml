@@ -5,9 +5,6 @@
 /out/
 intellij-plugin-sysml.zip
 
-# downloaded libs/resources
-/lib/
-
 # Per-user settings
 # https://intellij-support.jetbrains.com/entries/23393067
 .idea/workspace.xml
